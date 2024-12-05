@@ -14,7 +14,7 @@
 # Quantify regional climatic range for focal species from Cascades
 # Legacy Seed Addition Experiment using GBIF occurrence data and Climate NA data
 # GBIF data downloaded on Jan. 31, 2022. Download DOI: https://doi.org/10.15468/dd.wjqxtc 
-# Climate NA data downloaded on Oct. 17, 2022
+# Climate NA data downloaded on Oct. 17, 2022 Wang et al 2016
 
 # Quantifies climatic range for each species for a defined region and specifies the relative
 # climatic range position for each focal species at each seed addition site

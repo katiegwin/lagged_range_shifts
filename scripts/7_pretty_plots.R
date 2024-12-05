@@ -46,7 +46,7 @@ load("outputs/models/coldedge_biascorrpredict.Rdata") # predicted trend line usi
 
 ### outputs for model testing for recruitment failure beyond new warm edge (see recruitment_edge_analysis.R for how all these came to be)
 load("outputs/models/warmhypodata.Rdata") # data frame of species that recruited with sites beyond new warm limit with within/beyond factor and sites with thermal range position >0 (warm)
-load("outputs/models/hotedge_biascorrpredict.Rdata") # Bias corrected CIs
+load("outputs/models/hotedge_biascorrpredict.Rdata") # Bias corrected CIs and model predictions
 
 ### canopy cover plot (see canopy_analysis.R)
 load("outputs/models/canopy_optima.Rdata") # thermal optima from bootstraps for mean value of open and closed canopy treatments
@@ -54,7 +54,7 @@ load("outputs/models/canopy_optima.Rdata") # thermal optima from bootstraps for 
 ## zi part of optimal recruitment model
 load("outputs/models/optimalzi_biascorrpredict.Rdata")
 
-## canopy bias corrected bootstrap
+## canopy bias corrected CIs and model predictions
 load("outputs/models/canopy_biascorrpredict.Rdata")
 
 ## ppt prediction plot
@@ -126,7 +126,6 @@ census8 <- census %>%
            species == "RUBURS" | species == "SORSIT" | species == "TELGRA" |
            species == "TOLMEN" | species == "VACDEL" | species == "VACPAR" |
            species == "MAHNER" | species == "ERILAN" | species == "MAHAQU") # remove species with indiv in less than 8 plots
-
 
 
 # version for publication
@@ -233,7 +232,6 @@ cold <- ggplot(cpredictbias) +
   geom_linerange(aes(x = temprange_fac, ymin = log(lower.ci + 1), ymax = log(upper.ci + 1)), linewidth = .5, col = "black") +
   ylab("ln(Seedling Count + 1)") + xlab("Thermal range position") + 
   scale_x_discrete(labels = c('Cool Half Range', 'Beyond Cold Edge')) +
-  #annotate("text", x = 2.3, y=5, label = "P + __", col = "black")+ 
   theme_classic() +
   theme(legend.position = "none")
 cold
@@ -246,7 +244,6 @@ hot <- ggplot(hotpredictbias) +
   geom_linerange(aes(x = temprange_fac, ymin = log(lower.ci + 1), ymax = log(upper.ci + 1)), size = .5, col = "black") +
   ylab("ln(Seedling Count + 1)") + xlab("Thermal range position") + 
   scale_x_discrete(labels = c('Presumed Unsuitably Warm', 'Warm Half Range')) +
- # annotate("text", x = 2.3, y=4.3, label = "P = 0= __", col = "black")+ 
   theme_classic() +
   theme(legend.position = "none")
 hot
@@ -268,6 +265,7 @@ dev.off()
 ###########################################################################################
 #### CANOPY PLOT ------------------------------------------------
 ###########################################################################################
+# data set used for canopy
 censussuc <- census %>% 
   group_by(species) %>% 
   filter(species != "CARSPE" & species != "MAIDIL" & species !="MAIRAC" & species != "PINCON") 
@@ -280,7 +278,6 @@ census5 <- censussuc %>% #already subseted to species that recruited at least on
 census5a <- subset(census5, new_all != "NA")
 census5 <- census5a
 
-# where are all the optimas?
 canpeaks <- canpredictbias %>%
   group_by(canopycont) %>%
   summarize(max = temprange_pos[which.max(pred)])

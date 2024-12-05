@@ -51,7 +51,7 @@ str(census.rep)
 ##### Does canopy cover actually have a microclimatic buffering effect? - using Nathalies TOMST loggers -----
 ################################################################################
 # see Chardon et al 2024 https://doi.org/10.1111/ecog.07144 for detailed exploration of microscale recruitment patterns with these data
-# I use these data here just to confirm that was a microclimatic buffering affect due to canopy cover
+# We use these data here just to confirm that there was a microclimatic buffering affect due to canopy cover
 
 #### PREP DATA
 ## add canopy cover open or closed site 
@@ -75,7 +75,6 @@ hist(rep.envsum$canopycont1)
 
 ### PLOTS OF DIFFERENT MICROCLIMATE VARIABLES 
 # average  Soil moisture 
-# Conclusion: soil moisture doesnt change with canopy cover
 a <- ggplot(rep.envsum, aes(x = canopycont1, y = tmoist_avg)) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = 'lm', col = "black") +
@@ -88,7 +87,6 @@ ma <- lm(canopycont1 ~ tmoist_avg, data = rep.envsum)
 summary(ma)
 
 # Soil moisture range
-# Conclusion: soil moisture range doesnt change with canopy cover
 b <- ggplot(rep.envsum, aes(x = canopycont1, y = tmoist_range)) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = 'lm', col = "black") +
@@ -101,7 +99,6 @@ mb <- lm(canopycont1 ~ tmoist_range, data = rep.envsum)
 summary(mb)
 
 # Soil temp 
-# Conclusion: soil temp decreases with canopy cover
 c <- ggplot(rep.envsum, aes(x = canopycont1, y = t1_avg)) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = 'lm', col = "black") +
@@ -114,7 +111,6 @@ mc <- lm(canopycont1 ~ t1_avg, data = rep.envsum)
 summary(mc)
 
 # Soil temp range 
-# no change with canopy cover
 d <- ggplot(rep.envsum, aes(x = canopycont1, y = t1_range)) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = 'lm', col = "black") +
@@ -128,8 +124,6 @@ d
 
 
 # Above ground temp
-# Conclusion: decreases with canopy cover
-
 e <- ggplot(rep.envsum, aes(x = canopycont1, y = t3_avg)) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = 'lm', col = "black") +
@@ -143,7 +137,6 @@ summary(me)
 
 
 # Above ground temp range 
-# Conclusion: decreases with canopy cover
 f <- ggplot(rep.envsum, aes(x = canopycont1, y = t3_range)) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = 'lm', col = "black") +

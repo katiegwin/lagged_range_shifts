@@ -6,7 +6,7 @@ CLseed_sitesclim_Normal_1981_2010Y.csv = Climate NA 1981-2010 normals for each s
 
 metadata_variables.csv = description of all variables in other data frames
 
-microclimate.RData = measuresments of microclimate for each replicate plot (3 per site).
+microclimate.RData = measurements of microclimate for each replicate plot (3 per site).
 
 occur_biome_clim_Normal_1981_2010Y.RData = climate NA 1981-2010 normals for each GBIF adult occurrence record 
 
@@ -18,7 +18,7 @@ recruit_surv1yr.RData = data on whether or not recruits that germinated survived
 
 recruit_surv2yrs.RData = data on whether or not recruits that germinated survived to their third year
 
-recruit_survto2022.RData = data  on whether or not recruits survived to 2022 (the end of the experiment)
+recruit_survto2022.RData = data on whether or not recruits survived to 2022 (the end of the experiment)
 
 siterangepositions.csv = description of where each seed addition site falls within each focal species climatic range
 

@@ -35,8 +35,8 @@ site,,site name (region - elevational transect location - site within elevation
 species,,6 letter code for the species
 stht,,standardized mean height of seedlings for each species in a plot  in first year of growth (standardized to species mean and standard deviation)
 surv18to19,counts,germinated in 2018 and alive at final 2019 census
-surv18to20,counts,germinated in 2018 and alive at 2020 census
-surv19to20,counts,germinated in 2019 and alive at 2020 census
+surv18to20,counts,germinated in 2018 and alive at final 2020 census
+surv19to20,counts,germinated in 2019 and alive at final 2020 census
 surv1yr,proportion,proportion seedling survival in 1 year transitions
 surv22,counts,number of seedlings that survived to census in Sept 2022
 t1_avg,ºC,seasonal average of soil temperature TMS (Summer 2022)

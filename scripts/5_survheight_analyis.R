@@ -167,7 +167,6 @@ testUniformity(msurv_simres)
 testOutliers(msurv_simres)
 testQuantiles(msurv_simres) 
 
-### cannot run bootstraps because always give binomial non-integer warning (which is okay)
 
 msurv_temp <- as.data.frame(ggpredict(msurvq, terms = c("temprange_pos [all]", "pptrange_pos [0]")))
 plotsurv1 <- ggplot(msurv_temp) +
@@ -203,7 +202,6 @@ msurv_simres <- simulateResiduals(fittedModel = msurv2q, plot = T)
 testUniformity(msurv_simres) 
 testOutliers(msurv_simres) 
 testQuantiles(msurv_simres)  
-### CURRENTLY cannot run bootstraps because always give binomial non-integer warning (which is okay)
 
 msurv_temp <- as.data.frame(ggpredict(msurv2q, terms = c("temprange_pos [all]", "pptrange_pos [0]")))
 plotsurv2 <- ggplot(msurv_temp) +
@@ -241,11 +239,10 @@ AIC(msurv22, msurv22q) # no difference in AIC keeping linear
 # see https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.html#general-remarks-on-interperting-residual-patterns-and-tests
 msurv_simres <- simulateResiduals(fittedModel = msurv22, plot = T)
 
-testUniformity(msurv_simres) # looks good!
-testOutliers(msurv_simres) # looks good! (NOTE if one max obs of 4.13 there is an issue here)
-testQuantiles(msurv_simres)  # looks good
+testUniformity(msurv_simres) 
+testOutliers(msurv_simres) # (NOTE if one max obs of 4.13 is inlcuded there is an issue here)
+testQuantiles(msurv_simres)  # 
 
-### CURRENTLY cannot run bootstraps because always give binomial non-integer warning (which is okay)
 
 msurv_temp <- as.data.frame(ggpredict(msurv22, terms = c("temprange_pos [all]", "pptrange_pos [0]")))
 plotsurv22 <- ggplot(msurv_temp) +

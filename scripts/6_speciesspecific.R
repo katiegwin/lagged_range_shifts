@@ -60,7 +60,7 @@ census8 <- census8a
 sorsit <- subset(census8, species == "SORSIT")
 
 m.sorsit <- glmmTMB(new_all ~  poly(temprange_pos, 2) + poly(pptrange_pos, 2) 
-              + (1|site) , # note had to remove rep here
+              + (1|site) , 
               ziformula = ~ 1,
               data = sorsit, 
               family = nbinom2(link = "log")) 

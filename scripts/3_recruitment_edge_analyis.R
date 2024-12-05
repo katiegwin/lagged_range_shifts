@@ -38,7 +38,7 @@ library(DHARMa)
 library(ggeffects)
 
 
-# count census data 
+# seedling count census data 
 load('data/recruit_census.RData') 
 str(census)
 
@@ -47,7 +47,7 @@ str(census)
 #### RECRUITMENT AT AND BEYOND COLD EDGE ----
 ###########################################################################################
 ##### GENERATE DATASET ----
-# of species that successfully recruited and had sites beyond cold edge with binned thermal range position of coold half range of beyond cold edge
+# of species that successfully recruited and had sites beyond cold edge with binned thermal range position of cold half range of beyond cold edge
 
 # subset to species that successfully recruited
 speciesplots <- census %>%
@@ -76,7 +76,7 @@ leading <- leading1 %>%
            species == "TELGRA")
 unique(leading$species) # all these ^ species are in here! 
 
-# creating thermal range position bins: within = coold half of range, beyond = beyond cold edge
+# creating thermal range position bins: within = cold half of range, beyond = beyond cold edge
 hist(leading$temprange_pos, breaks = 50)
 within <- subset(leading, temprange_pos > -1)
 beyond <- subset(leading, temprange_pos < -1)

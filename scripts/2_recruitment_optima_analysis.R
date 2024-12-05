@@ -24,7 +24,7 @@ load("outputs/models/optimarecruit_biascorrpredict.Rdata") # predicted recruitme
 load("outputs/models/optimalzi_biascorrpredict.Rdata") # predicted recruitment with temp range position with bias-corrected CIs (zero inflaiton part) 
 load("outputs/models/ppt_biascorrpredict.Rdata") # predicted recruitment with ppt range position with bias-corrected CIs
 
-# these data frames were then inputed into scripts/outputscripts/pretty_plots.R to generate manuscript figs.
+# these data frames were then inputed into scripts/pretty_plots.R to generate manuscript figs.
 
 ###########################################################################################
 #### INPUTS AND PACKAGES ------------------------------------------------
@@ -36,7 +36,7 @@ library(ggeffects)
 library(DHARMa)
 library(GGally)
 
-# count census data 
+# seedling count census data 
 load('data/recruit_census.RData') 
 str(census)
 
@@ -48,7 +48,7 @@ ggpairs(census, columns = c("temprange_pos", "pptrange_pos", "canopycont")) # no
 
 ##### SOME RANDOM NUMBERS FOR MANUSCRIPT
 # how many species-rep combos were zero? (25 species in 180 plots)
-censuszero <- subset(census, new_all == "0") # 4107 zeroes
+censuszero <- subset(census, new_all == "0") 
 4107 / 4500
 # 91.3 % of species-rep combos were zero!
 
@@ -71,7 +71,7 @@ census8 <- census %>%
            species == "ERIPER" | species == "PICENG" |
            species == "RUBURS" | species == "SORSIT" | species == "TELGRA" |
            species == "TOLMEN" | species == "VACDEL" | species == "VACPAR" |
-           species == "MAHNER" | species == "ERILAN" | species == "MAHAQU") # remove species with indiv in less than 8 plots
+           species == "MAHNER" | species == "ERILAN" | species == "MAHAQU") 
 
 # remove values where new_all = NA (i.e., was more recruitment in control than seed addition plot)
 census8a <- subset(census8, new_all != "NA")
