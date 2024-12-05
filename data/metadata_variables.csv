@@ -1,0 +1,58 @@
+﻿variable,unit,description
+c,%,"% carbon content in soil, measured in UW lab(used for different study for details on these and all other microclimate variables see chardon et al 2024 ecography https://doi.org/10.1111/ecog.07144)"
+c_n,,soil carbon:nitrogen ratio from lab analyses (Summer 2022) (used for different study)
+canopy,,open or closed canopy cover site (binary)
+canopycont,% higher values = more open,"canopy cover as a continuous variable, where 0 = closed and 100 = open canopy (mean of all the measurements taken from 2018-2019 for that rep)"
+elev,metres,elevation (m)
+f_b,,"fungal:bacterial ratio, measured with microbiometer in field (used for different study)"
+family,,species family
+full_species,,full latin species name (based on taxonomic status in 2020)
+func_group,,"functional group to which the species belongs (tree, shrub, forb, sedge)"
+gbifID,,unique gbif id from occurrence download
+h,%,"% hydrogen content in soil, measured in UW lab (used for different study)"
+lat,,latitude (WGS84 DATUM)
+long,,longitude (WGS84 DATUM)
+MAP,mm,mean annual precipitation downloaded from climate NA (1981-2010)
+MAT,ºC,mean annual temperature downloaded from climate NA (1981-2010)
+meanmht,mm,mean height of seedlings for each species in a plot  in first year of growth 9 (up to three measured per cohort)
+meanspp,mm,mean height in first year of growth for a given species across the entire expeirment (to standardize height)
+microbes,microgram C/gram soil,"bacterial biomass, measured with microbiometer in field (used for different study)"
+n,%,"% nitrogen content in soil, measured in UW lab (used for different study)"
+new_all,counts,"recruited  any census year (sum of yearly counts, NA removed) main response variable"
+new18,counts,total number of new individuals in  final 2018 census 
+new19,counts,total number of new individuals in  final 2019 census 
+new20,counts,total number of new individuals in  final 2020 census 
+perc_bact,%,"% bacterial content in soil sample, measured with microbiometer in field (used for different study)"
+perc_fung,%,"% fungal content in soil sample, measured with microbiometer in field (used for different study)"
+plot_seeded,,which quadrat seeds of that given species were added to (w and l)
+pptrange_pos,,precipitation range position of that site for that species
+prop18surv20a,proportion,2-year seedling survival (2018-2020)
+propxxsurv22,proportion,"multi-year seedling survival (2018, 2019, 2020-2022) bc can't know when seedlings alive in 2022 germinated"
+region,,"RP = rainy pass (east side, drier), MB = mount baker (west side, wetter)"
+rep,,"replicate seed plot set: a, b, or c"
+sdpp,,standard deviation of height in first year of growth for a given species across the experiment (to standardize height)
+site,,site name (region - elevational transect location - site within elevation
+species,,6 letter code for the species
+stht,,standardized mean height of seedlings for each species in a plot  in first year of growth (standardized to species mean and standard deviation)
+surv18to19,counts,germinated in 2018 and alive at final 2019 census
+surv18to20,counts,germinated in 2018 and alive at 2020 census
+surv19to20,counts,germinated in 2019 and alive at 2020 census
+surv1yr,proportion,proportion seedling survival in 1 year transitions
+surv22,counts,number of seedlings that survived to census in Sept 2022
+t1_avg,ºC,seasonal average of soil temperature TMS (Summer 2022)
+t1_max,ºC,maximum TMS soil temperature of Summer 2022
+t1_min,ºC,minimum TMS soil temperature of Summer 2022
+t1_range,ºC,seasonal range of soil temperature TMS (Summer 2022)
+t2_avg,ºC,seasonal average of near-soil temperature TMS (Summer 2022)
+t2_max,ºC,maximum TMS near-soil temperature of Summer 2022
+t2_min,ºC,minimum TMS near-soil temperature of Summer 2022
+t2_range,ºC,seasonal range of near-soil temperature TMS (Summer 2022)
+t3_avg,ºC,seasonal average of plant height temperature TMS (Summer 2022)
+t3_max,ºC,maximum TMS plant height temperature of Summer 2022
+t3_min,ºC,minimum TMS plant height temperature of Summer 2022 
+t3_range,ºC,seasonal range of plant height temperature TMS (Summer 2022)
+temprange_pos,,thermal range position of that site for that species
+tmoist_avg,volumetric water content,seasonal average of soil moisture TMS (Summer 2022)
+tmoist_range,volumetric water content,seasonal range of soil moisture TMS (Summer 2022)
+whc,%,"water holding capacity (% ) in soil sample, measured in UW lab (used for different study)"
+yr1,,"1 year transitions (i.e., from 2018 to 2019 or 2019 to 2020) for seedling survival"
