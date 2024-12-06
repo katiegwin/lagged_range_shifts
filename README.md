@@ -36,13 +36,13 @@ year2size.Rdata = data on mean height of each species in each plot in the first 
 
 4_canopy_opt_analysis.R = modelling whether optimal recruitment changes with canopy cover
 
-5_surv_height_analysis.R = modelling survial and growth following initial recruitment
+5_surv_height_analysis.R = modelling survival and growth following initial recruitment
 
 6_speciesspecific.R = species-specific recruitment across the range
 
 7_pretty_plots.R = putting all the figures together
 
-bootstraps/ = folders of bootstrapping procedures to generate 95% confidence intervals for models to be run on a cluster server, since they take >24 hours.
+bootstraps/ = folders of bootstrapping code to generate 95% confidence intervals for models to be run on a separate cluster server, since they take >24 hours.
 
 
 # Outputs

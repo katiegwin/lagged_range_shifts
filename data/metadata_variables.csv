@@ -14,7 +14,7 @@ lat,,latitude (WGS84 DATUM)
 long,,longitude (WGS84 DATUM)
 MAP,mm,mean annual precipitation downloaded from climate NA (1981-2010)
 MAT,ºC,mean annual temperature downloaded from climate NA (1981-2010)
-meanmht,mm,mean height of seedlings for each species in a plot  in first year of growth 9 (up to three measured per cohort)
+meanmht,mm,mean height of seedlings for each species in a plot  in first year of growth  (up to three measured per cohort)
 meanspp,mm,mean height in first year of growth for a given species across the entire expeirment (to standardize height)
 microbes,microgram C/gram soil,"bacterial biomass, measured with microbiometer in field (used for different study)"
 n,%,"% nitrogen content in soil, measured in UW lab (used for different study)"
