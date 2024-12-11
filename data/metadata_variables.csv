@@ -56,3 +56,36 @@ tmoist_avg,volumetric water content,seasonal average of soil moisture TMS (Summe
 tmoist_range,volumetric water content,seasonal range of soil moisture TMS (Summer 2022)
 whc,%,"water holding capacity (% ) in soil sample, measured in UW lab (used for different study)"
 yr1,,"1 year transitions (i.e., from 2018 to 2019 or 2019 to 2020) for seedling survival"
+MWMT,,mean warmest month temperature (°C) downloaded from climate NA (1981-2010)
+MCMT,,mean coldest month temperature (°C) downloaded from climate NA (1981-2010)
+TD,,"temperature difference between MWMT and MCMT, or continentality (°C) downloaded from climate NA (1981-2010)"
+MSP,,mean annual summer (May to Sept.) precipitation (mm) downloaded from climate NA (1981-2010)
+AHM,,annual heat-moisture index (MAT+10)/(MAP/1000)) downloaded from climate NA (1981-2010)
+SHM,,summer heat-moisture index ((MWMT)/(MSP/1000))   downloaded from climate NA (1981-2010)
+DD<0 (or DD_0) ,,"degree-days below 0°C, chilling degree-days downloaded from climate NA (1981-2010)"
+DD>5 (or DD5),,"degree-days above 5°C, growing degree-days downloaded from climate NA (1981-2010)"
+DD<18 (or DD_18),,"degree-days below 18°C, heating degree-days downloaded from climate NA (1981-2010)"
+DD>18 (or DD18),,"degree-days above 18°C, cooling degree-days downloaded from climate NA (1981-2010)"
+NFFD,,the number of frost-free days downloaded from climate NA (1981-2010)
+FFP,,frost-free period downloaded from climate NA (1981-2010)
+bFFP,,the day of the year on which FFP begins downloaded from climate NA (1981-2010)
+eFFP,,the day of the year on which FFP ends downloaded from climate NA (1981-2010)
+PAS,,"precipitation as snow (mm). For individual years, it covers the period between August in the previous year and July in the current year downloaded from climate NA (1981-2010)"
+EMT,,extreme minimum temperature over 30 years (°C) downloaded from climate NA (1981-2010)
+EXT,,extreme maximum temperature over 30 years (°C) downloaded from climate NA (1981-2010)
+Eref,,Hargreaves reference evaporation (mm) downloaded from climate NA (1981-2010)
+CMD,,Hargreaves climatic moisture deficit (mm) downloaded from climate NA (1981-2010)
+MAR,,mean annual solar radiation (MJ m‐2 d‐1) downloaded from climate NA (1981-2010)
+RH,,mean annual relative humidity (%) downloaded from climate NA (1981-2010)
+CMI,,Hogg’s climate moisture index (mm) downloaded from climate NA (1981-2010)
+DD1040,,degree-days above 10°C and below 40°C downloaded from climate NA (1981-2010)
+ECO_NAME,,ecoregion name from GBIF 
+year (GIBF),,year of GBIF ocurrence record
+stateProvince,,state or province of GBIF ocurrence record
+verbatiumElevaiton,,elevation of GBIF occurrence record
+coordinateUncertaintyinMeters,,ucoordinate uncertainty for GBIF record
+elevation,,elevation of GBIF occurrence record
+elevationAccuracy,,elevational accuracy of GBIF occurrence record
+longitude,,longitude of GBIF occurrence record
+latitude,,latitude of GBIF occurrence record
+geometry,,latitude and longitude of gbif occurrence record for mapping
